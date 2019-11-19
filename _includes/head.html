@@ -9,14 +9,13 @@
       {%- include google-analytics.html -%}
     {%- endif -%}
 
-    <title>{% if page.title %}
-      {{ page.title }}
-      {% else %}
-      {{ site.title }}
-      {% endif %}</title>
-    <meta name="description" content="{{ site.description }}">
-    <meta property="og:title" content="Dali Alison" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://dalialison.github.io/" />
-    <meta property="og:image" content="http://dalialison.github.io/assets/photo.JPG" />
+    {% if page.type %}<meta content="{{ page.type }}" property="og:type">
+    {% else %}<meta content="blog" property="og:type" />{% endif %}
+    <meta content="{{ site.title }}" property="og:site_name">
+    {% if page.title %}<meta content="{{ page.title }}" property="og:title">
+    {% else %}<meta content="{{ site.title }}" property="og:title">{% endif %}
+    {% if page.description %}<meta content="{{ page.description }}" property="og:description">
+    {% else %}<meta content="{{ site.description }}" property="og:description">{% endif %}
+    {% if page.url %}<meta content="{{ site.url }}{{ page.url }}" property="og:url">{% endif %}
+    <meta content="http://dalialison.github.io/assets/photo.JPG" property="og:image">
   </head>
