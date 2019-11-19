@@ -92,7 +92,7 @@
   * Headings
   */
  h1, h2, h3, h4, h5, h6 {
-   font-weight: $base-font-weight;
+   font-weight: 500;
  }
  
  
@@ -109,15 +109,15 @@
    }
  
    &:hover {
-     color: $text-color;
-     text-decoration: underline;
+     color: rgb(221, 108, 108);
+     text-decoration: none;
    }
  
    .social-media-list &:hover {
      text-decoration: none;
  
      .username {
-       text-decoration: underline;
+       text-decoration: none;
      }
    }
  }
